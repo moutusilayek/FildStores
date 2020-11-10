@@ -1,0 +1,13 @@
+{
+  "id" : "474167d6-3f57-4e03-b6a2-7dff4f029749",
+  "request" : {
+    "url" : "/api/v1/service-template/model/101",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"responseCode\":\"200\",\"responseDescription\":\"SUCCESS\",\"response\":{\"id\":\"5fa12590cf651803a43c979c\",\"modId\":\"101\",\"modDesc\":\"Sample\"}}",
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "474167d6-3f57-4e03-b6a2-7dff4f029749"
+}

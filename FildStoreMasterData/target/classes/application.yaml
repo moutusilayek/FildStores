@@ -1,0 +1,35 @@
+##Application Name to appear in Azure App Insights
+spring:
+  application:
+    name: fild-store-data
+  ##Properties for Mongo
+  data:
+    mongodb:
+      database: FildStoresDb
+      uri: mongodb://fildcosmos:CSMfZUrvBEf98sUTVaQhSAe9CxdkLqITjhccrOmQmocoxhfsh0lxVxH7g9M06fx8EN1iYr2l4O4gd8sfH9hPqQ==@fildcosmos.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@fildcosmos@
+server:
+  port: 8097
+  application:
+    name: fild-store-data
+##Properties for Prometheus End Points
+endpoints:
+  prometheus:
+    enabled: true
+management:
+  endpoints:
+    web:
+      base-path: "/api/v1/fild-stores-data"
+      exposure:
+        include: "*"
+##OpenAPI To Enable
+springdoc:
+  swagger-ui.path: "/api/v1/fild-stores-data/swagger-ui-custom.html"
+  api-docs.path: "/api/v1/fild-stores-data/api-docs"
+##Azure Cosmos Credentials and App Insights Key
+azure:
+  application-insights:
+    instrumentation-key: f0807cb4-14fe-437c-ab41-6ed885735d2b
+
+service:
+  perf-urls:
+    get-model-url: "http://localhost:8097/servicetemplate/api/v1/getModel"
